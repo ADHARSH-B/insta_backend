@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix Instagram-frontend && npm run build --prefix Instagram-frontend"
+    "start": " node app.js"
   },
   "author": "ADHARSH",
   "license": "ISC",
@@ -14,11 +13,10 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.2",
-    "nodemailer": "^6.4.11",
+    "mongoose": "^5.11.18",
+    "nodemailer": "^6.5.0",
     "nodemailer-sendgrid-transport": "^0.2.0",
-    "nodemon": "^2.0.4",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.4.1",
     "unirest": "^0.6.0"
   }
 }
