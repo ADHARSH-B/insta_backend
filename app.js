@@ -1,7 +1,7 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const app =express()
-const bodyParser = require("body-parser")
+
 
 const PORT = process.env.PORT || 8080
 const { MONGO_URI } = require('./key')
@@ -27,10 +27,11 @@ app.use(authroute)
         res.sendFile(path.resolve(__dirname,'Instagram-frontend','build','index.html'))
     })
 }*/
+
 console.log(process.env.NODE_ENV)
 mongoose.connect(MONGO_URI).then(res=>{
     console.log("connected")
-    const server  = app.listen(8080)
+    const server  = app.listen(PORT)
     const socket = require("./socket").init(server)
     socket.on("connection",socket=>{
         console.log("client connected")
