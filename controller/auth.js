@@ -263,7 +263,7 @@ exports.resetpassword = (req,res,next)=>{
               subject: 'Password reset',
               html: `
                 <p>You requested a password reset</p>
-                <p>Click this <a href="https://instabackapi.herokuapp.com/reset/${token}">link</a> to set a new password.</p>
+                <p>Click this <a href="https://insta-b32b2.web.app/reset/${token}">link</a> to set a new password.</p>
               `
             });
             return res.json({message:"Check Your Mail"})
